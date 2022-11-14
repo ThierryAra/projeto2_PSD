@@ -1,0 +1,137 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'RST_DEB'
+Slack : -4.327
+TNS   : -41.809
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -3.206
+TNS   : -27.402
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_FPGA'
+Slack : -3.021
+TNS   : -53.077
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : -0.736
+TNS   : -5.152
+
+Type  : Slow 1200mV 85C Model Hold 'RST_DEB'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_FPGA'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CLK_FPGA'
+Slack : -2.232
+TNS   : -35.193
+
+Type  : Slow 1200mV 85C Model Removal 'CLK_FPGA'
+Slack : 1.759
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_FPGA'
+Slack : -3.000
+TNS   : -26.130
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -17.135
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RST_DEB'
+Slack : -3.000
+TNS   : -17.135
+
+Type  : Slow 1200mV 0C Model Setup 'RST_DEB'
+Slack : -3.891
+TNS   : -37.703
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -2.832
+TNS   : -24.267
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_FPGA'
+Slack : -2.740
+TNS   : -48.034
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : -0.724
+TNS   : -5.068
+
+Type  : Slow 1200mV 0C Model Hold 'RST_DEB'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_FPGA'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CLK_FPGA'
+Slack : -1.918
+TNS   : -30.551
+
+Type  : Slow 1200mV 0C Model Removal 'CLK_FPGA'
+Slack : 1.729
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_FPGA'
+Slack : -3.000
+TNS   : -26.130
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -17.135
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RST_DEB'
+Slack : -3.000
+TNS   : -17.135
+
+Type  : Fast 1200mV 0C Model Setup 'RST_DEB'
+Slack : -1.654
+TNS   : -15.743
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_FPGA'
+Slack : -1.490
+TNS   : -24.549
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -1.066
+TNS   : -8.021
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : -0.425
+TNS   : -2.975
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_FPGA'
+Slack : 0.039
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RST_DEB'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLK_FPGA'
+Slack : -1.320
+TNS   : -21.256
+
+Type  : Fast 1200mV 0C Model Removal 'CLK_FPGA'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_FPGA'
+Slack : -3.000
+TNS   : -21.969
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -18.291
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RST_DEB'
+Slack : -3.000
+TNS   : -16.112
+
+------------------------------------------------------------

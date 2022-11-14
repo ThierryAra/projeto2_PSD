@@ -1,0 +1,109 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "subindo",
+					"strict" : false
+				},
+				{
+					"name" : "parado",
+					"strict" : false
+				},
+				{
+					"name" : "descendo",
+					"strict" : false
+				},
+				{
+					"name" : "atual[6]",
+					"strict" : false
+				},
+				{
+					"name" : "atual[5]",
+					"strict" : false
+				},
+				{
+					"name" : "atual[4]",
+					"strict" : false
+				},
+				{
+					"name" : "atual[3]",
+					"strict" : false
+				},
+				{
+					"name" : "atual[2]",
+					"strict" : false
+				},
+				{
+					"name" : "atual[1]",
+					"strict" : false
+				},
+				{
+					"name" : "atual[0]",
+					"strict" : false
+				},
+				{
+					"name" : "req[6]",
+					"strict" : false
+				},
+				{
+					"name" : "req[5]",
+					"strict" : false
+				},
+				{
+					"name" : "req[4]",
+					"strict" : false
+				},
+				{
+					"name" : "req[3]",
+					"strict" : false
+				},
+				{
+					"name" : "req[2]",
+					"strict" : false
+				},
+				{
+					"name" : "req[1]",
+					"strict" : false
+				},
+				{
+					"name" : "req[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_DEB",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_FPGA",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

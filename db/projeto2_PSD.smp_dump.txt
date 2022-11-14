@@ -1,0 +1,6 @@
+
+State Machine - |bloco_elevador|elevador:inst|estado
+Name estado.S estado.D estado.P 
+estado.P 0 0 0 
+estado.D 0 1 1 
+estado.S 1 0 1 
