@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Nov 14 18:56:47 2022
-Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Thu Nov 17 15:57:57 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : projeto2_PSD
-Top-level Entity Name : bloco_elevador
+Top-level Entity Name : bloco_maqRefri
 Family : Cyclone IV E
-Total logic elements : 91
-    Total combinational functions : 87
-    Dedicated logic registers : 29
-Total registers : 29
-Total pins : 25
+Total logic elements : 270
+    Total combinational functions : 270
+    Dedicated logic registers : 51
+Total registers : 51
+Total pins : 9
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

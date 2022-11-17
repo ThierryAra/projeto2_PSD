@@ -9,7 +9,7 @@ library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
 
-entity maq_refri is
+entity maquina_refri is
   port(
   	clk   : in std_logic;
   	reset : in std_logic;
@@ -18,9 +18,9 @@ entity maq_refri is
   	liberado   : out std_logic;
   	retornado  : out std_logic
   );
-end maq_refri;
+end maquina_refri;
 
-architecture refri of maq_refri is
+architecture refri of maquina_refri is
 	type State_Type is (M, L); -- adicionar Moedas, Liberar refrigerante
 	signal estado : State_Type; 
 	
@@ -40,7 +40,7 @@ begin
 		elsif (clk'event AND clk = '1') then
 			case estado is
 				when M =>
-					if (soma = 100 AND botao = '1') then
+					if botao = '1' then
 						estado <= L;
 					else
 						if soma > 100 then
@@ -59,7 +59,10 @@ begin
 						end if;
 					end if;
 				when L =>
-					estado <= M;
+					if botao = '0' then
+						estado <= M;
+					end if;
+					
 					soma   <= 0;
 			end case;
 		end if;
@@ -77,14 +80,14 @@ begin
 			if estado = L then
 				if soma = 100 then
 					liberado  <= '1';
-				else 
-					if soma < 100 then -- necessario para tratar caso o 'liberado' nao seja desativado
-						retornado <= '1';
-					end if;
+				elsif soma < 100 then
+					retornado <= '1';
+					liberado  <= '0';
+				else
 					liberado <= '0';
 				end if;
 				
-			elsif estado = M then
+			elsif estado = M then 
 				if soma > 100 then
 					retornado <= '1';
 				else
