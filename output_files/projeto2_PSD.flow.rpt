@@ -1,6 +1,6 @@
 Flow report for projeto2_PSD
-Mon Nov 14 18:57:23 2022
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Thu Nov 17 15:58:24 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2019  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 14 18:57:23 2022       ;
-; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Flow Status                        ; Successful - Thu Nov 17 15:58:24 2022       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; projeto2_PSD                                ;
-; Top-level Entity Name              ; bloco_elevador                              ;
+; Top-level Entity Name              ; bloco_maqRefri                              ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 88 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 87 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 29 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 29                                          ;
-; Total pins                         ; 25 / 529 ( 5 % )                            ;
+; Total logic elements               ; 270 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 270 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 51 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 51                                          ;
+; Total pins                         ; 9 / 529 ( 2 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/14/2022 18:56:34 ;
+; Start date & time ; 11/17/2022 15:57:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; projeto2_PSD        ;
 +-------------------+---------------------+
@@ -76,22 +76,22 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+----------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+----------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 18121616244974.166846299418323         ; --            ; --             ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 10995770589195.166871146809804         ; --            ; --             ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --             ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --             ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --             ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --             ; eda_board_design_symbol           ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --             ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --             ; --                                ;
+; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (Verilog)            ; <None>        ; --             ; --                                ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --             ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --                                ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --             ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; bloco_elevador ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; bloco_elevador ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; bloco_elevador ; Top                               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; bloco_maqRefri ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; bloco_maqRefri ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; bloco_maqRefri ; Top                               ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --             ; --                                ;
-; TOP_LEVEL_ENTITY                    ; bloco_elevador                         ; projeto2_PSD  ; --             ; --                                ;
+; TOP_LEVEL_ENTITY                    ; bloco_maqRefri                         ; projeto2_PSD  ; --             ; --                                ;
 +-------------------------------------+----------------------------------------+---------------+----------------+-----------------------------------+
 
 
@@ -100,26 +100,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 973 MB              ; 00:00:31                           ;
-; Fitter               ; 00:00:24     ; 1.0                     ; 2006 MB             ; 00:00:42                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 820 MB              ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 952 MB              ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1038 MB             ; 00:00:01                           ;
-; Total                ; 00:00:44     ; --                      ; --                  ; 00:01:21                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4826 MB             ; 00:00:19                           ;
+; Fitter               ; 00:00:17     ; 1.0                     ; 5718 MB             ; 00:00:27                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4715 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4861 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4647 MB             ; 00:00:01                           ;
+; Total                ; 00:00:32     ; --                      ; --                  ; 00:00:52                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; thierryAra       ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
-; Fitter               ; thierryAra       ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
-; Assembler            ; thierryAra       ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
-; Timing Analyzer      ; thierryAra       ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
-; EDA Netlist Writer   ; thierryAra       ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; 6-306-08         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; 6-306-08         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; 6-306-08         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; 6-306-08         ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 6-306-08         ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------

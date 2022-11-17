@@ -4,71 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "subindo",
+					"name" : "liberado",
 					"strict" : false
 				},
 				{
-					"name" : "parado",
-					"strict" : false
-				},
-				{
-					"name" : "descendo",
-					"strict" : false
-				},
-				{
-					"name" : "atual[6]",
-					"strict" : false
-				},
-				{
-					"name" : "atual[5]",
-					"strict" : false
-				},
-				{
-					"name" : "atual[4]",
-					"strict" : false
-				},
-				{
-					"name" : "atual[3]",
-					"strict" : false
-				},
-				{
-					"name" : "atual[2]",
-					"strict" : false
-				},
-				{
-					"name" : "atual[1]",
-					"strict" : false
-				},
-				{
-					"name" : "atual[0]",
-					"strict" : false
-				},
-				{
-					"name" : "req[6]",
-					"strict" : false
-				},
-				{
-					"name" : "req[5]",
-					"strict" : false
-				},
-				{
-					"name" : "req[4]",
-					"strict" : false
-				},
-				{
-					"name" : "req[3]",
-					"strict" : false
-				},
-				{
-					"name" : "req[2]",
-					"strict" : false
-				},
-				{
-					"name" : "req[1]",
-					"strict" : false
-				},
-				{
-					"name" : "req[0]",
+					"name" : "retornado",
 					"strict" : false
 				},
 				{
@@ -76,19 +16,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "input[2]",
-					"strict" : false
-				},
-				{
-					"name" : "input[3]",
-					"strict" : false
-				},
-				{
-					"name" : "input[1]",
+					"name" : "botao",
 					"strict" : false
 				},
 				{
 					"name" : "input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input[1]",
 					"strict" : false
 				},
 				{
