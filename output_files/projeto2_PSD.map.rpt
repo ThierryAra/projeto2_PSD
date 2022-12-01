@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto2_PSD
-Thu Nov 17 15:57:57 2022
+Thu Dec  1 14:52:25 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -13,7 +13,7 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
+  8. State Machine - |bloco_elevador|elevador:inst|estado
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Parameter Settings for User Entity Instance: debouncer:inst3
@@ -46,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 17 15:57:57 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec  1 14:52:25 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; projeto2_PSD                                ;
-; Top-level Entity Name              ; bloco_maqRefri                              ;
+; Top-level Entity Name              ; bloco_elevador                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 270                                         ;
-;     Total combinational functions  ; 270                                         ;
-;     Dedicated logic registers      ; 51                                          ;
-; Total registers                    ; 51                                          ;
-; Total pins                         ; 9                                           ;
+; Total logic elements               ; 87                                          ;
+;     Total combinational functions  ; 83                                          ;
+;     Dedicated logic registers      ; 29                                          ;
+; Total registers                    ; 29                                          ;
+; Total pins                         ; 25                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; bloco_maqRefri     ; projeto2_PSD       ;
+; Top-level entity name                                            ; bloco_elevador     ; projeto2_PSD       ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -167,47 +167,48 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
-; maq_refri.vhd                    ; yes             ; User VHDL File                     ; C:/Users/12681094/Documents/projeto2_PSD/maq_refri.vhd      ;         ;
-; bloco_maqRefri.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/12681094/Documents/projeto2_PSD/bloco_maqRefri.bdf ;         ;
-; debouncer.v                      ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/12681094/Documents/projeto2_PSD/debouncer.v        ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------+---------+
+; elevador.vhd                     ; yes             ; User VHDL File                           ; C:/Users/12681094/Documents/projeto2_PSD/elevador.vhd       ;         ;
+; bloco_elevador.bdf               ; yes             ; User Block Diagram/Schematic File        ; C:/Users/12681094/Documents/projeto2_PSD/bloco_elevador.bdf ;         ;
+; debouncer.v                      ; yes             ; Auto-Found Verilog HDL File              ; C:/Users/12681094/Documents/projeto2_PSD/debouncer.v        ;         ;
+; display.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/12681094/Documents/projeto2_PSD/display.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 270            ;
-;                                             ;                ;
-; Total combinational functions               ; 270            ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 91             ;
-;     -- 3 input functions                    ; 29             ;
-;     -- <=2 input functions                  ; 150            ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 135            ;
-;     -- arithmetic mode                      ; 135            ;
-;                                             ;                ;
-; Total registers                             ; 51             ;
-;     -- Dedicated logic registers            ; 51             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 9              ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; input[1]~input ;
-; Maximum fan-out                             ; 45             ;
-; Total fan-out                               ; 947            ;
-; Average fan-out                             ; 2.79           ;
-+---------------------------------------------+----------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 87          ;
+;                                             ;             ;
+; Total combinational functions               ; 83          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 37          ;
+;     -- 3 input functions                    ; 11          ;
+;     -- <=2 input functions                  ; 35          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 68          ;
+;     -- arithmetic mode                      ; 15          ;
+;                                             ;             ;
+; Total registers                             ; 29          ;
+;     -- Dedicated logic registers            ; 29          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 25          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; RESET~input ;
+; Maximum fan-out                             ; 28          ;
+; Total fan-out                               ; 415         ;
+; Average fan-out                             ; 2.56        ;
++---------------------------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -215,22 +216,25 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+----------------+--------------+
-; |bloco_maqRefri            ; 270 (0)             ; 51 (0)                    ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |bloco_maqRefri                 ; bloco_maqRefri ; work         ;
-;    |debouncer:inst3|       ; 28 (28)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bloco_maqRefri|debouncer:inst3 ; debouncer      ; work         ;
-;    |maq_refri:inst|        ; 242 (242)           ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bloco_maqRefri|maq_refri:inst  ; maq_refri      ; work         ;
+; |bloco_elevador            ; 83 (0)              ; 29 (0)                    ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |bloco_elevador                 ; bloco_elevador ; work         ;
+;    |debouncer:inst3|       ; 28 (28)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bloco_elevador|debouncer:inst3 ; debouncer      ; work         ;
+;    |display:inst1|         ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bloco_elevador|display:inst1   ; display        ; work         ;
+;    |display:inst2|         ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bloco_elevador|display:inst2   ; display        ; work         ;
+;    |elevador:inst|         ; 27 (27)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bloco_elevador|elevador:inst   ; elevador       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                    ;
-+----------------------------------------------------+--------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal      ; Free of Timing Hazards ;
-+----------------------------------------------------+--------------------------+------------------------+
-; maq_refri:inst|retornado                           ; maq_refri:inst|retornado ; yes                    ;
-; Number of user-specified and inferred latches = 1  ;                          ;                        ;
-+----------------------------------------------------+--------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+Encoding Type:  One-Hot
++------------------------------------------------------+
+; State Machine - |bloco_elevador|elevador:inst|estado ;
++----------+----------+----------+---------------------+
+; Name     ; estado.S ; estado.D ; estado.P            ;
++----------+----------+----------+---------------------+
+; estado.P ; 0        ; 0        ; 0                   ;
+; estado.D ; 0        ; 1        ; 1                   ;
+; estado.S ; 1        ; 0        ; 1                   ;
++----------+----------+----------+---------------------+
 
 
 +------------------------------------------------------+
@@ -238,24 +242,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 51    ;
+; Total registers                              ; 29    ;
 ; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 51    ;
+; Number of registers using Asynchronous Clear ; 29    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 21    ;
+; Number of registers using Clock Enable       ; 20    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |bloco_maqRefri|debouncer:inst3|counter[0] ;
-; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; Yes        ; |bloco_maqRefri|maq_refri:inst|soma[15]    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |bloco_elevador|elevador:inst|andar_atual[3] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |bloco_elevador|debouncer:inst3|counter[0]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |bloco_elevador|elevador:inst|descendo       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |bloco_elevador|elevador:inst|estado         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
 +--------------------------------------------------------------+
@@ -273,22 +279,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 9                           ;
-; cycloneiii_ff         ; 51                          ;
-;     CLR               ; 30                          ;
-;     ENA CLR           ; 5                           ;
+; boundary_port         ; 25                          ;
+; cycloneiii_ff         ; 29                          ;
+;     CLR               ; 9                           ;
+;     ENA CLR           ; 4                           ;
 ;     ENA CLR SCLR      ; 16                          ;
-; cycloneiii_lcell_comb ; 270                         ;
-;     arith             ; 135                         ;
-;         2 data inputs ; 135                         ;
-;     normal            ; 135                         ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 29                          ;
-;         4 data inputs ; 91                          ;
+; cycloneiii_lcell_comb ; 99                          ;
+;     arith             ; 15                          ;
+;         2 data inputs ; 15                          ;
+;     normal            ; 84                          ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 37                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.10                        ;
-; Average LUT depth     ; 5.33                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -307,7 +313,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Thu Nov 17 15:57:48 2022
+    Info: Processing started: Thu Dec  1 14:52:16 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto2_PSD -c projeto2_PSD
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -321,33 +327,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file bloco_e
     Info (12023): Found entity 1: bloco_elevador
 Info (12021): Found 1 design units, including 1 entities, in source file bloco_maqrefri.bdf
     Info (12023): Found entity 1: bloco_maqRefri
-Info (12127): Elaborating entity "bloco_maqRefri" for the top level hierarchy
-Info (12128): Elaborating entity "maq_refri" for hierarchy "maq_refri:inst"
-Warning (10631): VHDL Process Statement warning at maq_refri.vhd(69): inferring latch(es) for signal or variable "liberado", which holds its previous value in one or more paths through the process File: C:/Users/12681094/Documents/projeto2_PSD/maq_refri.vhd Line: 69
-Warning (10631): VHDL Process Statement warning at maq_refri.vhd(69): inferring latch(es) for signal or variable "retornado", which holds its previous value in one or more paths through the process File: C:/Users/12681094/Documents/projeto2_PSD/maq_refri.vhd Line: 69
-Info (10041): Inferred latch for "retornado" at maq_refri.vhd(69) File: C:/Users/12681094/Documents/projeto2_PSD/maq_refri.vhd Line: 69
+Info (12127): Elaborating entity "bloco_elevador" for the top level hierarchy
+Info (12128): Elaborating entity "elevador" for hierarchy "elevador:inst"
+Warning (10631): VHDL Process Statement warning at elevador.vhd(105): inferring latch(es) for signal or variable "subindo", which holds its previous value in one or more paths through the process File: C:/Users/12681094/Documents/projeto2_PSD/elevador.vhd Line: 105
+Warning (10631): VHDL Process Statement warning at elevador.vhd(105): inferring latch(es) for signal or variable "parado", which holds its previous value in one or more paths through the process File: C:/Users/12681094/Documents/projeto2_PSD/elevador.vhd Line: 105
+Warning (10631): VHDL Process Statement warning at elevador.vhd(105): inferring latch(es) for signal or variable "descendo", which holds its previous value in one or more paths through the process File: C:/Users/12681094/Documents/projeto2_PSD/elevador.vhd Line: 105
+Info (10041): Inferred latch for "descendo" at elevador.vhd(105) File: C:/Users/12681094/Documents/projeto2_PSD/elevador.vhd Line: 105
+Info (10041): Inferred latch for "parado" at elevador.vhd(105) File: C:/Users/12681094/Documents/projeto2_PSD/elevador.vhd Line: 105
+Info (10041): Inferred latch for "subindo" at elevador.vhd(105) File: C:/Users/12681094/Documents/projeto2_PSD/elevador.vhd Line: 105
 Warning (12125): Using design file debouncer.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: debouncer File: C:/Users/12681094/Documents/projeto2_PSD/debouncer.v Line: 28
 Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst3"
 Warning (10230): Verilog HDL assignment warning at debouncer.v(71): truncated value with size 32 to match size of target (16) File: C:/Users/12681094/Documents/projeto2_PSD/debouncer.v Line: 71
-Warning (13012): Latch maq_refri:inst|retornado has unsafe behavior File: C:/Users/12681094/Documents/projeto2_PSD/maq_refri.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal maq_refri:inst|estado File: C:/Users/12681094/Documents/projeto2_PSD/maq_refri.vhd Line: 25
+Warning (12125): Using design file display.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: display
+Info (12128): Elaborating entity "display" for hierarchy "display:inst1"
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "debouncer:inst3|out_key" is converted into an equivalent circuit using register "debouncer:inst3|out_key~_emulated" and latch "debouncer:inst3|out_key~1" File: C:/Users/12681094/Documents/projeto2_PSD/debouncer.v Line: 42
     Warning (13310): Register "debouncer:inst3|intermediate" is converted into an equivalent circuit using register "debouncer:inst3|intermediate~_emulated" and latch "debouncer:inst3|out_key~1" File: C:/Users/12681094/Documents/projeto2_PSD/debouncer.v Line: 50
 Info (286030): Timing-Driven Synthesis is running
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register maq_refri:inst|soma[31] will power up to Low File: C:/Users/12681094/Documents/projeto2_PSD/maq_refri.vhd Line: 36
-    Critical Warning (18010): Register maq_refri:inst|soma[0] will power up to Low File: C:/Users/12681094/Documents/projeto2_PSD/maq_refri.vhd Line: 36
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 280 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 271 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4826 megabytes
-    Info: Processing ended: Thu Nov 17 15:57:57 2022
+Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 87 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Thu Dec  1 14:52:25 2022
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:19
 

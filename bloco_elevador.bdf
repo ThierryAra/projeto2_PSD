@@ -456,4 +456,4 @@ https://fpgasoftware.intel.com/eula.
 (text "HEX3" (rect 840 208 873 227)(font "Intel Clear" (font_size 8)))
 (text "CLK_FPGA -> SW0" (rect -96 96 16 115)(font "Intel Clear" (font_size 8)))
 (text "RST_DEB -> SW1" (rect -96 112 9 131)(font "Intel Clear" (font_size 8)))
-(text "CLK -> SW5" (rect -96 128 -25 147)(font "Intel Clear" (font_size 8)))
+(text "CLK -> SW7" (rect -96 128 -25 147)(font "Intel Clear" (font_size 8)))

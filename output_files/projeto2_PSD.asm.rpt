@@ -1,5 +1,5 @@
 Assembler report for projeto2_PSD
-Thu Nov 17 15:58:19 2022
+Thu Dec  1 14:52:44 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Nov 17 15:58:19 2022 ;
+; Assembler Status      ; Successful - Thu Dec  1 14:52:44 2022 ;
 ; Revision Name         ; projeto2_PSD                          ;
-; Top-level Entity Name ; bloco_maqRefri                        ;
+; Top-level Entity Name ; bloco_elevador                        ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE115F29C7                         ;
 +-----------------------+---------------------------------------+
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+---------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                         ;
 +----------------+---------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x005881BF                                                                      ;
-; Checksum       ; 0x005881BF                                                                      ;
+; JTAG usercode  ; 0x00571C7D                                                                      ;
+; Checksum       ; 0x00571C7D                                                                      ;
 +----------------+---------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Thu Nov 17 15:58:16 2022
+    Info: Processing started: Thu Dec  1 14:52:41 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off projeto2_PSD -c projeto2_PSD
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4716 megabytes
-    Info: Processing ended: Thu Nov 17 15:58:19 2022
+    Info: Peak virtual memory: 4719 megabytes
+    Info: Processing ended: Thu Dec  1 14:52:44 2022
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

@@ -43,13 +43,15 @@ begin
 					if (soma = 100 AND botao = '1') then
 						estado <= L;
 					else
-						if soma > 100 then
+						if soma > 100  then
 							soma <= 0;
+						elsif (soma < 100 AND botao = '1') then
+							estado <= L;
 						else
 							-- soma das moedas
 							if moeda = d_z then
 								soma <= soma + 10;
-							elsif moeda = v_o then
+							elsif  moeda = v_o then
 								soma <= soma + 25;
 							elsif moeda = c_a then
 								soma <= soma + 50;
@@ -59,7 +61,9 @@ begin
 						end if;
 					end if;
 				when L =>
-					estado <= M;
+					if botao = '0' then
+						estado <= M;
+					end if;
 					soma   <= 0;
 			end case;
 		end if;
